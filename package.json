@@ -9,7 +9,7 @@
   "scripts": {
     "test": "playwright test --config=prod.config.js",
     "debug": "playwright test --config=prod.config.js --debug",
-    "codegen": "playwright codegen beta.wifi.ru/public/demo"
+    "codegen": "playwright codegen demo.faktura.ru"
   },
   "repository": {
     "type": "git",
