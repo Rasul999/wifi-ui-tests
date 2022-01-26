@@ -1,29 +1,17 @@
 {
-  "name": "wifi-ui-tests",
+  "name": "e2e-tests",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
+  "private": true,
   "scripts": {
-    "test": "playwright test --config=prod.config.js",
-    "debug": "playwright test --config=prod.config.js --debug",
-    "codegen": "playwright codegen demo.faktura.ru"
+    "test": "env-cmd -f .env codeceptjs run --steps",
+    "test:dev": "env-cmd -f .env.development codeceptjs run --steps",
+    "test:ui": "env-cmd -f .env.development codecept-ui --app"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Rasul999/wifi-ui-tests.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Rasul999/wifi-ui-tests/issues"
-  },
-  "homepage": "https://github.com/Rasul999/wifi-ui-tests#readme",
   "dependencies": {
-    "@playwright/test": "^1.16.3",
-    "env-cmd": "^10.1.0"
+    "@codeceptjs/ui": "0.4.6",
+    "codeceptjs": "3.1.1",
+    "env-cmd": "10.1.0",
+    "faker": "5.5.3",
+    "playwright": "1.14.0"
   }
 }
